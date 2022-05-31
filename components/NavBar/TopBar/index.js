@@ -8,7 +8,7 @@ export default function TopBar() {
     const helpMenuData = [
         {
             heading: "help",
-            menuItems: [
+            items: [
                 {
                     title: "Order Status",
                 },
