@@ -1,0 +1,21 @@
+@mixin scale {
+    @keyframes scale {
+        from{
+            transform: scale(0);
+        }
+        to{
+            transform: scale(1);
+        }
+    }
+}
+
+@mixin onSearchTranslate {
+    @keyframes onSearchTranslate {
+        from{
+            transform: translate(0);
+        }
+        to{
+            transform: translateY(- $topBarHeight);
+        }
+    }
+}

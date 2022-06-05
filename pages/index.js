@@ -1,7 +1,7 @@
-import NavBar from "../components/navBar";
+import MegaMenu from "../components/MegaMenu";
 
 export default function Home() {
   return (
-    <NavBar/>
+    <MegaMenu/>
   );
 }
