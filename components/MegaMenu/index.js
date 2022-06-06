@@ -24,25 +24,23 @@ export default function MegaMenu(props) {
             setSearchExpanded(false);
         }
     }
-
-    useEffect(() => {
-        console.log("searchExpanded", searchExpanded);
-    }, [searchExpanded])
-
     return (
         <>
             <TopBar />
-            <div className="container container--fluid">
+            <div className="container container--fluid z-99">
                 <div className={`navBar flex justify-between ${searchExpanded ? "navBar--search" : ""}`}>
                     <div className="navBar__left flex">
-                        <Image
-                            src="/assets/icons/nike.svg"
-                            height={60}
-                            width={60}
-                        />
+                        <Link href="#">
+                            <a href="#" className="main-logo">
+                                <Image
+                                    src="/assets/icons/nike.svg"
+                                    height={60}
+                                    width={60}
+                                />
+                            </a>
+                        </Link>
                     </div>
                     <div className="navBar__right flex align-center ">
-
                         <SearchBar
                             onCLickHandler={enableSearchExtended}
                             isExtended={searchExpanded}
@@ -91,30 +89,35 @@ export default function MegaMenu(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="main-menu">
-                        {
-                            data.map((item, index) => {
-                                return (
-                                    <DropdownMenu
-                                        menuData={item.submenus}
-                                        type="navBar"
-                                        key={index}
-                                    >
-                                        <Link href="#">
-                                            <a
-                                                href="#"
-                                                className="navBar-nav-item"
+                    {
+                        !searchExpanded
+                            ? <div className="main-menu">
+                                {
+                                    data.map((item, index) => {
+                                        return (
+                                            <DropdownMenu
+                                                menuData={item.submenus}
+                                                type="navBar"
+                                                key={index}
                                             >
-                                                {item.heading}
-                                            </a>
-                                        </Link>
-                                    </DropdownMenu>
-                                );
-                            })
-                        }
-                    </div>
+                                                <Link href="#">
+                                                    <a
+                                                        href="#"
+                                                        className="navBar-nav-item"
+                                                    >
+                                                        {item.heading}
+                                                    </a>
+                                                </Link>
+                                            </DropdownMenu>
+                                        );
+                                    })
+                                }
+                            </div>
+                            : <></>
+                    }
                 </div>
             </div>
+            {/* <div className="backdrop"></div> */}
         </>
     );
 }

@@ -55,9 +55,7 @@
             &__right {
                 flex: 0 0 75%;
 
-                .main-menu {
-                    width: 0px;
-                }
+                .main-menu {}
 
                 .searchBar-wrapper {
                     margin: 0 0 0 38px;
@@ -70,11 +68,25 @@
                             &__input {
                                 width: $searchBarExpanded;
                             }
+
+                            &__clearText-btn {
+                                position: absolute;
+                                right: 2px;
+                                top: 0px;
+                                padding: 6px 8px;
+                                cursor: pointer;
+                                border-radius: 999px;
+
+                                &:hover {
+                                    background-color: #e5e5e5;
+                                }
+                            }
                         }
 
                         .searchTerm-wrapper {
                             visibility: visible;
-                            transform: translateY(0);
+                            opacity: 1;
+                            height: $searchTermHeight;
                         }
                     }
                 }
@@ -104,6 +116,14 @@
     &__left {
         padding: 0 12px;
         flex: 0 0 33.33%;
+
+        .main-logo {
+            z-index: 1;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
     }
 
     &__right {
@@ -111,6 +131,8 @@
 
         .utility {
             gap: 12px;
+            z-index: 1;
+
 
             &__button-group {
                 display: flex;
@@ -151,17 +173,17 @@
 
     .main-menu {
         position: absolute;
-        left: 0;
+        left: -16.800px;
         width: 100vw;
         display: flex;
         justify-content: center;
-        z-index: -1;
     }
 }
 
 .searchBar-wrapper {
     margin-left: auto;
     margin-right: 12px;
+    z-index: 1;
 
     .searchBar {
         position: relative;
@@ -196,49 +218,57 @@
 
     .searchTerm-wrapper {
         visibility: hidden;
+        opacity: 0;
         position: absolute;
         z-index: -1;
         left: 0;
         top: $navBarHeight;
         padding: 36px 32px 0;
+        height: 0px;
         width: 100vw;
         background-color: #fff;
-        height: 312px;
-        transform: translateY(-100px);
-        transition: all 0.55s;
+        transition: all 0.25s ease-in-out;
 
         .searchTerm {
             max-width: $searchBarExpanded;
             margin: 0 auto;
 
             &__heading {
-                padding-bottom: 16px;
                 @include text-menu--heading;
+                @include fadeIn;
+                padding-bottom: 16px;
                 text-transform: capitalize;
                 color: $text-secondary;
+                opacity: 0;
+                animation: fadeIn .25s .5s ease-in-out forwards;
             }
 
             &__list {
 
                 &-item {
                     @include text-searchTerm--item;
+                    @include fadeIn;
                     margin-bottom: 12px;
+                    opacity: 0;
+                    animation: fadeIn .25s .65s ease-in-out forwards;
                 }
             }
         }
     }
+
+    .overlay {}
 }
 
 .menu-dropdown-container {
-    height: 100%;
 
     &__topBar {
         position: relative;
 
         .menu-dropdown-wrapper {
             padding: 24px 24px 16px;
+            border-radius: 0 0 10px 10px;
             min-width: 240px;
-            top: $topBarHeight;
+            top: 30px;
             right: 0;
         }
     }
@@ -247,6 +277,7 @@
         .menu-dropdown-wrapper {
             padding: 16px 40px 40px;
             min-width: 100vw;
+            max-height: 100vh;
             max-height: 100vh;
             top: $navBarHeight;
             left: 0;
@@ -258,7 +289,13 @@
                 max-width: 1344px;
 
                 &>.subMenu {
+                    // @include fadeIn;
                     width: calc(100% / 6);
+                    transform: translateY(-20px);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.25s ease-in-out;
+                    // animation: fadeIn 0.25s 0.5s ease-in-out;
 
                     &--one-half {
                         display: flex;
@@ -270,22 +307,60 @@
         }
     }
 
-
     &:hover {
         .menu-dropdown-wrapper {
             opacity: 1;
             visibility: visible;
+
+            .menu-dropdown {
+                &>.subMenu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    &.menu-dropdown-container__topBar {
+        .menu-dropdown-wrapper {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: all 0.25s ease-in-out;
+        }
+
+        &:hover {
+            .menu-dropdown-wrapper {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-dropdown-wrapper {}
+    }
+
+    &:hover.menu-dropdown-container__navBar {
+        .menu-dropdown-wrapper {
+            .menu-dropdown {
+                &>.subMenu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
         }
     }
 }
 
 .menu-dropdown-wrapper {
     position: absolute;
-    border-radius: 0 0 10px 10px;
     opacity: 0;
     visibility: hidden;
     background-color: $bg-white;
     z-index: 10;
+    transition: max-height 0.15s ease-out;
 
     .menu-dropdown {
         width: 100%;
@@ -297,11 +372,9 @@
                 @include text-menu--heading;
                 margin-bottom: 12px;
                 padding: 4px 8px;
-
             }
 
             &__list {
-
                 &-item {
                     @include text-menu--item;
                     padding: 4px 8px;
@@ -313,4 +386,21 @@
             }
         }
     }
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: hsla(0,0%,7%,.36);
+    backdrop-filter: blur(4px);
+    // z-index: -1;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    background-color: salmon;
 }
