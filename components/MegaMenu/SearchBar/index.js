@@ -3,7 +3,8 @@ import Link from "next/link";
 
 import { useRef, useState, useEffect } from 'react';
 
-export default function SearchBar({ onCLickHandler, isExtended }) {
+export default function SearchBar(props) {
+    const { onCLickHandler, isExtended } = props;
     const searchFieldRef = useRef();
     const [inputHasText, setInputHasText] = useState(false);
 
@@ -109,7 +110,6 @@ export default function SearchBar({ onCLickHandler, isExtended }) {
                                 </ul>
                             </div>
                         </div>
-                        <div className="overlay"></div>
                     </>
                     : <></>
             }

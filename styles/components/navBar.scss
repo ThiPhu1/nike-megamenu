@@ -42,6 +42,7 @@
     padding: 0 36px 0 38px;
     height: $navBarHeight;
     background-color: #fff;
+    z-index: 1;
 
     &--search {
         @include onSearchTranslate;
@@ -251,6 +252,10 @@
                     margin-bottom: 12px;
                     opacity: 0;
                     animation: fadeIn .25s .65s ease-in-out forwards;
+
+                    &:hover{
+                        color: $text-searchTerm-hover;
+                    }
                 }
             }
         }
@@ -289,13 +294,11 @@
                 max-width: 1344px;
 
                 &>.subMenu {
-                    // @include fadeIn;
                     width: calc(100% / 6);
                     transform: translateY(-20px);
                     opacity: 0;
                     visibility: hidden;
-                    transition: all 0.25s ease-in-out;
-                    // animation: fadeIn 0.25s 0.5s ease-in-out;
+                    transition: all 0.25s 0.15s ease-in-out;
 
                     &--one-half {
                         display: flex;

@@ -12,22 +12,26 @@ export default function MegaMenu(props) {
     const { data } = jsonFile;
 
     const [searchExpanded, setSearchExpanded] = useState(false);
+    const [backdropActive, setBackdropActive] = useState(false);
 
     const enableSearchExtended = () => {
         if (!searchExpanded) {
             setSearchExpanded(true);
+            setBackdropActive(true);
         }
     }
 
     const disableSearchExtended = () => {
         if (searchExpanded) {
             setSearchExpanded(false);
+            setBackdropActive(false);
         }
     }
+
     return (
         <>
             <TopBar />
-            <div className="container container--fluid z-99">
+            <div className="container container--fluid relative">
                 <div className={`navBar flex justify-between ${searchExpanded ? "navBar--search" : ""}`}>
                     <div className="navBar__left flex">
                         <Link href="#">
@@ -96,9 +100,10 @@ export default function MegaMenu(props) {
                                     data.map((item, index) => {
                                         return (
                                             <DropdownMenu
+                                                key={index}
                                                 menuData={item.submenus}
                                                 type="navBar"
-                                                key={index}
+                                                setBackdropActive={setBackdropActive}
                                             >
                                                 <Link href="#">
                                                     <a
@@ -116,8 +121,8 @@ export default function MegaMenu(props) {
                             : <></>
                     }
                 </div>
+                {backdropActive && <div className="backdrop"></div>}
             </div>
-            {/* <div className="backdrop"></div> */}
         </>
     );
 }
