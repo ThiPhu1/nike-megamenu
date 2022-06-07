@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import TopBar from "./TopBar";
 import SearchBar from "./SearchBar";
@@ -13,6 +13,7 @@ export default function MegaMenu(props) {
 
     const [searchExpanded, setSearchExpanded] = useState(false);
     const [backdropActive, setBackdropActive] = useState(false);
+    const [navBarPos, setNavbarPos] = useState('relative');
 
     const enableSearchExtended = () => {
         if (!searchExpanded) {
@@ -28,11 +29,46 @@ export default function MegaMenu(props) {
         }
     }
 
+    useEffect(() => {
+        const threshold = 0;
+        let lastScrollY = window.pageYOffset;
+        let ticking = false;
+
+        const updateScrollDir = () => {
+            const scrollY = window.pageYOffset;
+
+            if (Math.abs(scrollY - lastScrollY) < threshold) {
+                ticking = false;
+                return;
+            }
+            if (scrollY > 36) {
+                setNavbarPos(scrollY < lastScrollY ? "is-fixed" : "is-fixed is-hidden");
+            } else {
+                setNavbarPos('relative')
+            }
+            lastScrollY = scrollY > 0 ? scrollY : 0;
+            ticking = false;
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrollDir);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [navBarPos]);
+
     return (
         <>
             <TopBar />
-            <div className="container container--fluid relative">
-                <div className={`navBar flex justify-between ${searchExpanded ? "navBar--search" : ""}`}>
+            <div className={`container container--fluid ${navBarPos}`}>
+                <div
+                    className={`navBar ${searchExpanded ? "navBar--search" : ""}`}
+                >
                     <div className="navBar__left flex">
                         <Link href="#">
                             <a href="#" className="main-logo">

@@ -20,14 +20,23 @@
     }
 }
 
-@mixin fadeIn {
-    @keyframes fadeIn {
+@mixin translate {
+    @keyframes translate {
         from{
             transform: translateY(-20px);
-            opacity: 0;
         }
         to{
             transform: translateY(0);
+        }
+    }
+}
+
+@mixin fadeIn {
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
             opacity: 1;
         }
     }
