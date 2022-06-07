@@ -63,102 +63,105 @@ export default function MegaMenu(props) {
     }, [navBarPos]);
 
     return (
-        <>
+        <div className="container container--fluid">
             <TopBar />
-            <div className={`container container--fluid ${navBarPos}`}>
-                <div
-                    className={`navBar ${searchExpanded ? "navBar--search" : ""}`}
-                >
-                    <div className="navBar__left flex">
-                        <Link href="#">
-                            <a href="#" className="main-logo">
-                                <Image
-                                    src="/assets/icons/nike.svg"
-                                    height={60}
-                                    width={60}
-                                />
-                            </a>
-                        </Link>
-                    </div>
-                    <div className="navBar__right flex align-center ">
-                        <SearchBar
-                            onCLickHandler={enableSearchExtended}
-                            isExtended={searchExpanded}
-                        />
-                        <div className="utility flex">
+            <div className="container container--fluid relative z-50">
+                <div className={`navBar-wrapper ${navBarPos}`}>
+                    <div
+                        className={`navBar ${searchExpanded ? "navBar--search" : ""}`}
+                    >
+                        <div className="navBar__left flex">
+                            <Link href="#">
+                                <a href="#" className="main-logo">
+                                    <Image
+                                        src="/assets/icons/nike.svg"
+                                        height={60}
+                                        width={60}
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                        <div className="navBar__right flex align-center ">
+                            <SearchBar
+                                onCLickHandler={enableSearchExtended}
+                                isExtended={searchExpanded}
+                            />
+                            <div className="utility flex">
 
-                            <div className="utility__button-group">
-                                {searchExpanded
-                                    ? <a
-                                        className="utility-btn utility-btn--close flex"
-                                        href="#"
-                                        onClick={disableSearchExtended}
-                                    >
-                                        <Image
-                                            src="/assets/icons/times.svg"
-                                            width={12}
-                                            height={12}
-                                        />
-                                    </a>
-                                    : <>
-                                        <Link href="#">
-                                            <a
-                                                className="utility-btn flex"
-                                                href="#"
-                                            >
-                                                <Image
-                                                    src="/assets/icons/heart.svg"
-                                                    width={24}
-                                                    height={24}
-                                                />
-                                            </a>
-                                        </Link>
-                                        <Link href="#">
-                                            <a
-                                                className="utility-btn flex"
-                                                href="#"
-                                            >
-                                                <Image
-                                                    src="/assets/icons/bag.svg"
-                                                    width={24}
-                                                    height={24}
-                                                />
-                                            </a>
-                                        </Link>
-                                    </>}
+                                <div className="utility__button-group">
+                                    {searchExpanded
+                                        ? <a
+                                            className="utility-btn utility-btn--close flex"
+                                            href="#"
+                                            onClick={disableSearchExtended}
+                                        >
+                                            <Image
+                                                src="/assets/icons/times.svg"
+                                                width={12}
+                                                height={12}
+                                            />
+                                        </a>
+                                        : <>
+                                            <Link href="#">
+                                                <a
+                                                    className="utility-btn flex"
+                                                    href="#"
+                                                >
+                                                    <Image
+                                                        src="/assets/icons/heart.svg"
+                                                        width={24}
+                                                        height={24}
+                                                    />
+                                                </a>
+                                            </Link>
+                                            <Link href="#">
+                                                <a
+                                                    className="utility-btn flex"
+                                                    href="#"
+                                                >
+                                                    <Image
+                                                        src="/assets/icons/bag.svg"
+                                                        width={24}
+                                                        height={24}
+                                                    />
+                                                </a>
+                                            </Link>
+                                        </>}
+                                </div>
                             </div>
                         </div>
+                        {
+                            !searchExpanded
+                                ? <div className="main-menu">
+                                    {
+                                        data.map((item, index) => {
+                                            return (
+                                                <DropdownMenu
+                                                    key={index}
+                                                    menuData={item.submenus}
+                                                    type="navBar"
+                                                    setBackdropActive={setBackdropActive}
+                                                >
+                                                    <Link href="#">
+                                                        <a
+                                                            href="#"
+                                                            className="navBar-nav-item"
+                                                        >
+                                                            {item.heading}
+                                                        </a>
+                                                    </Link>
+                                                </DropdownMenu>
+                                            );
+                                        })
+                                    }
+                                </div>
+                                : <></>
+                        }
                     </div>
-                    {
-                        !searchExpanded
-                            ? <div className="main-menu">
-                                {
-                                    data.map((item, index) => {
-                                        return (
-                                            <DropdownMenu
-                                                key={index}
-                                                menuData={item.submenus}
-                                                type="navBar"
-                                                setBackdropActive={setBackdropActive}
-                                            >
-                                                <Link href="#">
-                                                    <a
-                                                        href="#"
-                                                        className="navBar-nav-item"
-                                                    >
-                                                        {item.heading}
-                                                    </a>
-                                                </Link>
-                                            </DropdownMenu>
-                                        );
-                                    })
-                                }
-                            </div>
-                            : <></>
-                    }
                 </div>
-                {backdropActive && <div className="backdrop"></div>}
             </div>
-        </>
+            <div className="backdrop"></div>
+            {/* {backdropActive && <div className="backdrop"></div>} */}
+        </div>
     );
 }

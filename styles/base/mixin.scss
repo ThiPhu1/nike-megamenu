@@ -1,3 +1,4 @@
+
 @mixin text--sm {
     font-size: 12px;
     line-height: 14px;
@@ -28,4 +29,11 @@
     line-height: 1.5;
     color: $text-primary;
 }
+
+@mixin lg-down {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
 

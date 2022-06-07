@@ -38,7 +38,7 @@ export default function TopBar() {
     ];
 
     return (
-        <div className="container container--fluid z-99">
+        <div className="container container--fluid relative z-50">
             <div className="topBar flex justify-between">
                 <div className="topBar__left flex">
                     <Image
