@@ -3,7 +3,8 @@ import Image from "next/image";
 
 import DropdownMenu from "../DropdownMenu";
 
-export default function TopBar() {
+export default function TopBar(props) {
+    const { searchExpanded } = props;
 
     const helpMenuData = [
         {
@@ -39,7 +40,7 @@ export default function TopBar() {
 
     return (
         <div className="container container--fluid relative z-50">
-            <div className="topBar flex justify-between">
+            <div className={`topBar flex justify-between ${searchExpanded ?  "is-hidden" : ""}`}>
                 <div className="topBar__left flex">
                     <Image
                         src="/assets/icons/jordan.svg"

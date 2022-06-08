@@ -62,9 +62,16 @@ export default function MegaMenu(props) {
         return () => window.removeEventListener("scroll", onScroll);
     }, [navBarPos]);
 
+    const onBackDropClick = () => {
+        setSearchExpanded(false);
+        setBackdropActive(false);
+    }
+
     return (
         <div className="container container--fluid">
-            <TopBar />
+            <TopBar 
+                searchExpanded={searchExpanded}
+            />
             <div className="container container--fluid relative z-50">
                 <div className={`navBar-wrapper ${navBarPos}`}>
                     <div
@@ -92,7 +99,6 @@ export default function MegaMenu(props) {
                                     {searchExpanded
                                         ? <a
                                             className="utility-btn utility-btn--close flex"
-                                            href="#"
                                             onClick={disableSearchExtended}
                                         >
                                             <Image
@@ -160,8 +166,7 @@ export default function MegaMenu(props) {
                     </div>
                 </div>
             </div>
-            <div className="backdrop"></div>
-            {/* {backdropActive && <div className="backdrop"></div>} */}
+            {backdropActive && <div className="backdrop" onClick={onBackDropClick}></div>}
         </div>
     );
 }
