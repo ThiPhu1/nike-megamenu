@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 import TopBar from "./TopBar";
 import SearchBar from "./SearchBar";
@@ -69,7 +69,7 @@ export default function MegaMenu(props) {
 
     return (
         <div className="container container--fluid">
-            <TopBar 
+            <TopBar
                 searchExpanded={searchExpanded}
             />
             <div className="container container--fluid relative z-50">
@@ -110,8 +110,7 @@ export default function MegaMenu(props) {
                                         : <>
                                             <Link href="#">
                                                 <a
-                                                    className="utility-btn flex"
-                                                    href="#"
+                                                    className="utility-btn utility-btn--wishlist flex"
                                                 >
                                                     <Image
                                                         src="/assets/icons/heart.svg"
@@ -123,7 +122,6 @@ export default function MegaMenu(props) {
                                             <Link href="#">
                                                 <a
                                                     className="utility-btn flex"
-                                                    href="#"
                                                 >
                                                     <Image
                                                         src="/assets/icons/bag.svg"
@@ -132,6 +130,15 @@ export default function MegaMenu(props) {
                                                     />
                                                 </a>
                                             </Link>
+                                            <a
+                                                className="utility-btn flex utility-btn--bars"
+                                            >
+                                                <Image
+                                                    src="/assets/icons/bars.svg"
+                                                    width={24}
+                                                    height={24}
+                                                />
+                                            </a>
                                         </>}
                                 </div>
                             </div>

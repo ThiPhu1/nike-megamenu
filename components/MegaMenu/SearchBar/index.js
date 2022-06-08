@@ -1,12 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { useRef, useState, useEffect } from 'react';
 
 export default function SearchBar(props) {
     const { onCLickHandler, isExtended } = props;
     const searchFieldRef = useRef();
     const [inputHasText, setInputHasText] = useState(false);
+    const { isCustomDevice:isTablet } = useDeviceDetect(1024);
+
+    useEffect(()=>{
+        console.log(isTablet);
+    },[isTablet])
 
     const searchTerms = [
         {
@@ -52,9 +57,9 @@ export default function SearchBar(props) {
     return (
         <div className={`searchBar-wrapper ${isExtended ? "searchBar-wrapper--expanded" : ""}`}>
             <div className="searchBar" onClick={onCLickHandler}>
-                <form>
+                <form className="searchForm">
                     <a
-                        className="searchBar__logo"
+                        className={`searchBar__icon absolute`}
                         type={isExtended ? "submit" : "button"}
                         onClick={isExtended ? onFormSubmit : () => false}
                     >

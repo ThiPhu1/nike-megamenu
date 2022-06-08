@@ -30,6 +30,12 @@
     color: $text-primary;
 }
 
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
 @mixin lg-down {
     @media (max-width: #{$screen-lg-min}) {
         @content;
