@@ -47,21 +47,21 @@
 
 }
 
-.is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    transform: translateY(0);
-    transition: all 0.25s ease-in-out;
-}
-
-.is-hidden {
-    transform: translateY(-$navBarHeight);
-}
-
 .navBar-wrapper {
     width: 100%;
+
+    &.is-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        transform: translateY(0);
+        transition: all 0.25s ease-in-out;
+    }
+    
+    &.is-hidden {
+        transform: translateY(-$navBarHeight);
+    }
 
     &.is-fixed {
         .navBar {
@@ -78,6 +78,10 @@
         justify-content: space-between;
         height: $navBarHeight;
         background-color: #fff;
+
+        @include lg-down {
+            padding: 0 16px;
+        }
 
         &--search {
             @include onSearchTranslate;
@@ -102,6 +106,7 @@
                     @include lg-down {
                         flex: 0 0 100%;
                     }
+
                     .main-menu {}
 
                     .searchBar-wrapper {
@@ -507,6 +512,30 @@
     backdrop-filter: blur(4px);
     animation: fadeIn 0.5s ease-in-out;
 
+}
+
+.sidebar-wrapper{
+    padding: 40px 36px 150px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: $sideBarWidth;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX($sideBarWidth);
+    transition: all 0.15s ease-in-out;
+    z-index: 99;
+
+    &.is-active{
+        transform: translateX(0);
+    }
+
+    .close-btn{
+        position: absolute;
+        margin-right: 10px;
+        top: 8px;
+        right: 14px;
+    }
 }
 
 .body {

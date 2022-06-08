@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import TopBar from "./TopBar";
 import SearchBar from "./SearchBar";
 import DropdownMenu from "./DropdownMenu";
+import Sidebar from "./Sidebar";
+
 import jsonFile from "./mainMenuData.json";
 
 export default function MegaMenu(props) {
@@ -13,6 +15,7 @@ export default function MegaMenu(props) {
 
     const [searchExpanded, setSearchExpanded] = useState(false);
     const [backdropActive, setBackdropActive] = useState(false);
+    const [sidebarActive, setSidebarActive] = useState(false);
     const [navBarPos, setNavbarPos] = useState('relative');
 
     const enableSearchExtended = () => {
@@ -63,7 +66,18 @@ export default function MegaMenu(props) {
     }, [navBarPos]);
 
     const onBackDropClick = () => {
-        setSearchExpanded(false);
+        if (searchExpanded) { setSearchExpanded(false); }
+        if (sidebarActive) { setSidebarActive(false); }
+        setBackdropActive(false);
+    }
+
+    const enableMenuBar = () => {
+        setSidebarActive(true);
+        setBackdropActive(true);
+    }
+
+    const disableMenuBar = () => {
+        setSidebarActive(false);
         setBackdropActive(false);
     }
 
@@ -132,6 +146,7 @@ export default function MegaMenu(props) {
                                             </Link>
                                             <a
                                                 className="utility-btn flex utility-btn--bars"
+                                                onClick={enableMenuBar}
                                             >
                                                 <Image
                                                     src="/assets/icons/bars.svg"
@@ -173,6 +188,10 @@ export default function MegaMenu(props) {
                     </div>
                 </div>
             </div>
+            <Sidebar
+                disableMenuBar={disableMenuBar}
+                sidebarActive={sidebarActive}
+            />
             {backdropActive && <div className="backdrop" onClick={onBackDropClick}></div>}
         </div>
     );
