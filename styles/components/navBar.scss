@@ -398,7 +398,7 @@
     opacity: 0;
     visibility: hidden;
     background-color: $bg-white;
-    z-index: 10;
+    z-index: 99;
     transition: max-height 0.15s ease-out;
 
     .menu-dropdown {

@@ -39,7 +39,7 @@ export default function TopBar(props) {
     ];
 
     return (
-        <div className="container container--fluid relative z-50">
+        <div className="container container--fluid relative">
             <div className={`topBar flex justify-between ${searchExpanded ?  "is-hidden" : ""}`}>
                 <div className="topBar__left flex">
                     <Image
