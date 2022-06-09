@@ -116,7 +116,7 @@ export default function MegaMenu(props) {
                                             onClick={disableSearchExtended}
                                         >
                                             <Image
-                                                src="/assets/icons/times.svg"
+                                                src="/assets/icons/times-l.svg"
                                                 width={12}
                                                 height={12}
                                             />
@@ -191,6 +191,7 @@ export default function MegaMenu(props) {
             <Sidebar
                 disableMenuBar={disableMenuBar}
                 sidebarActive={sidebarActive}
+                menuData={data}
             />
             {backdropActive && <div className="backdrop" onClick={onBackDropClick}></div>}
         </div>
