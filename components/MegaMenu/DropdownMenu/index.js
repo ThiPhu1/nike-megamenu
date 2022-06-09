@@ -24,9 +24,9 @@ export default function DropdownMenu(props) {
                     <div className={`menu-dropdown`}>
                         {menuData.map((menuColumn, index) => {
 
-                            if (menuColumn.columnType == "one-half") {
+                            if (menuColumn.columnType == "group") {
                                 return (
-                                    <div className="subMenu subMenu--one-half" key={index}>
+                                    <div className="subMenu subMenu--group" key={index}>
                                         {
                                             menuColumn.items.map((item, index) => {
                                                 return (

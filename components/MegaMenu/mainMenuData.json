@@ -2,39 +2,39 @@
     "data": [
         {
             "heading": "men",
-            "submenus": [
+            "items": [
                 {
                     "heading": "New & Featured",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -42,34 +42,34 @@
                     "heading": "Shoes",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -77,69 +77,69 @@
                     "heading": "Clothing",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
                 {
-                    "columnType": "one-half",
+                    "columnType": "group",
                     "items": [
                         {
                             "heading": "Shop By Sport",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         },
@@ -147,25 +147,25 @@
                             "heading": "Shop By Brand",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         }
@@ -175,19 +175,19 @@
                     "heading": "Icons",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 }
@@ -195,39 +195,39 @@
         },
         {
             "heading": "women",
-            "submenus": [
+            "items": [
                 {
                     "heading": "New & Featured",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -235,34 +235,34 @@
                     "heading": "Shoes",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -270,69 +270,69 @@
                     "heading": "Clothing",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
                 {
-                    "columnType": "one-half",
+                    "columnType": "group",
                     "items": [
                         {
                             "heading": "Shop By Sport",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         },
@@ -340,25 +340,25 @@
                             "heading": "Shop By Brand",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         }
@@ -368,19 +368,19 @@
                     "heading": "Icons",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 }
@@ -388,77 +388,77 @@
         },
         {
             "heading": "kids",
-            "submenus": [
+            "items": [
                 {
                     "heading": "New & Featured",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
                 {
-                    "columnType": "one-half",
+                    "columnType": "group",
                     "items": [
                         {
                             "heading": "Boys' Shoes",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         },
@@ -466,56 +466,56 @@
                             "heading": "Boys' Clothing",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "columnType": "one-half",
+                    "columnType": "group",
                     "items": [
                         {
                             "heading": "Girls' Shoes",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         },
@@ -523,50 +523,50 @@
                             "heading": "Girls' Clothing",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "columnType": "one-half",
+                    "columnType": "group",
                     "items": [
                         {
                             "heading": "Accessories and Equipment",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         },
@@ -574,19 +574,19 @@
                             "heading": "Shop By Sport",
                             "items": [
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 },
                                 {
-                                    "title": "Lorem Ipsum"
+                                    "heading": "Lorem Ipsum"
                                 }
                             ]
                         }
@@ -596,39 +596,39 @@
         },
         {
             "heading": "customise",
-            "submenus": [
+            "items": [
                 {
                     "heading": "Featured",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -636,34 +636,34 @@
                     "heading": "Nike By You",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -671,37 +671,37 @@
                     "heading": "By Sport",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -709,28 +709,28 @@
                     "heading": "Icons",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 }
@@ -738,39 +738,39 @@
         },
         {
             "heading": "sale",
-            "submenus": [
+            "items": [
                 {
                     "heading": "Featured",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -778,34 +778,34 @@
                     "heading": "Men's Sale",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -813,37 +813,37 @@
                     "heading": "Women's Sale",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 },
@@ -851,28 +851,28 @@
                     "heading": "Kid's Sale",
                     "items": [
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         },
                         {
-                            "title": "Lorem Ipsum"
+                            "heading": "Lorem Ipsum"
                         }
                     ]
                 }
@@ -880,7 +880,7 @@
         },
         {
             "heading": "SNKRS",
-            "submenus": []
+            "items": []
         }
     ]
 }

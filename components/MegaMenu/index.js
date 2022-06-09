@@ -86,7 +86,7 @@ export default function MegaMenu(props) {
             <TopBar
                 searchExpanded={searchExpanded}
             />
-            <div className="container container--fluid relative z-50">
+            <div className="container container--fluid relative z-9999">
                 <div className={`navBar-wrapper ${navBarPos}`}>
                     <div
                         className={`navBar ${searchExpanded ? "navBar--search" : ""}`}
@@ -190,6 +190,7 @@ export default function MegaMenu(props) {
             <Sidebar
                 disableMenuBar={disableMenuBar}
                 sidebarActive={sidebarActive}
+                setSidebarActive={setSidebarActive}
                 menuData={data}
             />
             {backdropActive && <div className={`backdrop ${sidebarActive ? "backdrop--sidebar" : ""}`} onClick={onBackDropClick}></div>}
