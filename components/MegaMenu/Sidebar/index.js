@@ -36,22 +36,28 @@ export default function Sidebar(props) {
         enableBodyScroll(sidebarRef.current);
 
     }, [sidebarActive])
-
+    
     const [subMenuData, setSubMenuData] = useState();
-    const [subMenuActive, setActiveStatus] = useState(false);
-    const [subMenuChildActive, setSubMenuChildActive] = useState(false);
+    const [mainMenuActive, setMainMenuActive] = useState();
+    const [subMenuActive, setSubMenuActive] = useState();
 
     const onMenuItemClick = (data) => {
         setSubMenuData(data);
-        setActiveStatus(true);
+        setMainMenuActive("t-left-2");
+        setSubMenuActive("t-left");
     }
 
-    console.log("menuData", menuData);
+    useEffect(()=>{
+        if(!sidebarActive){
+            setMainMenuActive("");
+            setSubMenuActive("");
+        }
+    },[sidebarActive])
 
     return (
         <div className={`sidebar-container ${sidebarActive ? "is-active" : ""}`} ref={sidebarRef}>
             {/* <div className="container-viewport"> */}
-                <div className={`sidebar-wrapper`}>
+                <div className={`sidebar-wrapper ${mainMenuActive}`}>
                     <div className="sidebar">
                         <div className="close-btn-wrapper">
                             <a
@@ -190,7 +196,8 @@ export default function Sidebar(props) {
                 <SubMenu
                     menuData={subMenuData}
                     isActive={subMenuActive}
-                    setActiveStatus={setActiveStatus}
+                    setSubMenuActive={setSubMenuActive}
+                    setMainMenuActive={setMainMenuActive}
                 />
             {/* </div> */}
         </div>

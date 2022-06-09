@@ -11,35 +11,35 @@ export default function TopBar(props) {
             heading: "help",
             items: [
                 {
-                    title: "Order Status",
+                    heading: "Order Status",
                 },
                 {
-                    title: "Dispatch and Delivery",
+                    heading: "Dispatch and Delivery",
                 },
                 {
-                    title: "Returns",
+                    heading: "Returns",
                 },
                 {
-                    title: "Contact Us",
+                    heading: "Contact Us",
                 },
                 {
-                    title: "Privacy Policy",
+                    heading: "Privacy Policy",
                 },
                 {
-                    title: "Terms of Sale",
+                    heading: "Terms of Sale",
                 },
                 {
-                    title: "Terms of Use",
+                    heading: "Terms of Use",
                 },
                 {
-                    title: "Send Us Feedback",
+                    heading: "Send Us Feedback",
                 },
             ]
         }
     ];
 
     return (
-        <div className="container container--fluid relative">
+        <div className={`container container--fluid relative  ${searchExpanded ?  "z-50" : "z-10000"}`}>
             <div className={`topBar flex justify-between ${searchExpanded ?  "is-hidden" : ""}`}>
                 <div className="topBar__left flex">
                     <Image

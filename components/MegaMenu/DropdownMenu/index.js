@@ -38,7 +38,7 @@ export default function DropdownMenu(props) {
                                                                     <li className="subMenu__list-item" key={index}>
                                                                         <Link href={menuItem.url || "#"}>
                                                                             <a href="#">
-                                                                                {menuItem.title}
+                                                                                {menuItem.heading}
                                                                             </a>
                                                                         </Link>
                                                                     </li>
@@ -62,7 +62,7 @@ export default function DropdownMenu(props) {
                                                     <li className="subMenu__list-item" key={index}>
                                                         <Link href={menuItem.url || "#"}>
                                                             <a href="#">
-                                                                {menuItem.title}
+                                                                {menuItem.heading}
                                                             </a>
                                                         </Link>
                                                     </li>

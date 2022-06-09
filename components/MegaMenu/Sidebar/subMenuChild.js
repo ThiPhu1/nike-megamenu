@@ -4,45 +4,12 @@ import { useState, useEffect, useRef } from "react";
 export default function SubMenuChild(props) {
     const { menuData, isActive, setActiveStatus, setSubMenuActive } = props;
 
-    useEffect(() => {
-        console.log("menuData", menuData);
-    }, [menuData])
-
-    // const flattenMenuData = menuData?.data?.map((item) => {
-    //     if (item.columnType) {
-    //         return [...item.items]
-    //     }
-    //     return item
-    // }).flat();
-
-    // useEffect(() => {
-    //     console.log("flattenMenuData", flattenMenuData);
-
-    // }, [menuData])
-
-    // useEffect(() => {
-    //     console.log("isActive", isActive);
-
-    // }, [isActive])
-
-    // const [childMenuData, setChildMenuData] = useState();
-
-    // const onMenuItemClick = (data) => {
-    //     setChildMenuData(data);
-    //     // setActiveStatus(true);
-    // }
-
     const onBackBtnClick = () => {
-        setActiveStatus(false);
-        setSubMenuActive(true);
+        setSubMenuActive("t-right");
     }
 
-    // useEffect(() => {
-    //     console.log("childMenuData", childMenuData);
-    // }, [childMenuData])
-
     return (
-        <div className={`subMenu-wrapper ${isActive ? "is-active" : "is-hidden"}`}>
+        <div className={`subMenu-wrapper subMenu-child-wrapper ${isActive}`}>
             <div className="subMenu">
                 <div className="back-btn-wrapper">
                     <a

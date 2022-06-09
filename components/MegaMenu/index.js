@@ -165,7 +165,7 @@ export default function MegaMenu(props) {
                                             return (
                                                 <DropdownMenu
                                                     key={index}
-                                                    menuData={item.submenus}
+                                                    menuData={item.items}
                                                     type="navBar"
                                                     setBackdropActive={setBackdropActive}
                                                 >
