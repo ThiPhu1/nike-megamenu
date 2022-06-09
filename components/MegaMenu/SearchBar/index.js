@@ -9,9 +9,9 @@ export default function SearchBar(props) {
     const [inputHasText, setInputHasText] = useState(false);
     const { isCustomDevice:isTablet } = useDeviceDetect(1024);
 
-    useEffect(()=>{
-        console.log(isTablet);
-    },[isTablet])
+    // useEffect(()=>{
+    //     console.log(isTablet);
+    // },[isTablet])
 
     const searchTerms = [
         {

@@ -5,6 +5,12 @@
     color: $text-primary;
 }
 
+@mixin text--md {
+    font-size: 16px;
+    line-height: 16px;
+    color: $text-primary;
+}
+
 @mixin text--lg {
     font-size: 24px;
     line-height: 28px;

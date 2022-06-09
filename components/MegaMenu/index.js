@@ -108,7 +108,6 @@ export default function MegaMenu(props) {
                                 isExtended={searchExpanded}
                             />
                             <div className="utility flex">
-
                                 <div className="utility__button-group">
                                     {searchExpanded
                                         ? <a
@@ -193,7 +192,7 @@ export default function MegaMenu(props) {
                 sidebarActive={sidebarActive}
                 menuData={data}
             />
-            {backdropActive && <div className="backdrop" onClick={onBackDropClick}></div>}
+            {backdropActive && <div className={`backdrop ${sidebarActive ? "backdrop--sidebar" : ""}`} onClick={onBackDropClick}></div>}
         </div>
     );
 }
