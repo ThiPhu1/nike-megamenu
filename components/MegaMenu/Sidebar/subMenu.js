@@ -22,8 +22,8 @@ export default function SubMenu(props) {
     }
 
     const onBackBtnClick = () => {
-        setSubMenuActive(false);
-        setMainMenuActive(true);
+        setSubMenuActive("");
+        setMainMenuActive("");
     }
 
     return (

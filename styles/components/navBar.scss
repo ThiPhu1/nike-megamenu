@@ -520,7 +520,7 @@
 }
 
 .sidebar-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     display: flex;
@@ -694,8 +694,7 @@
         background-color: $bg-white;
 
         .subMenu {
-            margin-top: 46px;
-            padding: 0 36px 150px;
+            padding: 46px 36px 150px;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
