@@ -58,7 +58,6 @@ export default function Sidebar(props) {
 
     return (
         <div className={`sidebar-container ${sidebarActive ? "is-active" : ""}`} ref={sidebarRef}>
-            {/* <div className="container-viewport"> */}
             <div className={`sidebar-wrapper ${mainMenuActive}`}>
                 <div className="sidebar">
                     <div className="close-btn-wrapper">
@@ -219,7 +218,6 @@ export default function Sidebar(props) {
                 setMainMenuActive={setMainMenuActive}
                 disableSideBar={disableSideBar}
             />
-            {/* </div> */}
         </div>
     )
 }

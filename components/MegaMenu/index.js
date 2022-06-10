@@ -48,7 +48,7 @@ export default function MegaMenu(props) {
                 ticking = false;
                 return;
             }
-            if (scrollY > 20) {
+            if (scrollY > 50) {
                 setNavbarPos(scrollY < lastScrollY ? "is-fixed" : "is-fixed is-hidden");
             } else {
                 setNavbarPos('')
@@ -202,4 +202,14 @@ export default function MegaMenu(props) {
             <div className={`backdrop ${backdropActive ? "is-active" : ""} ${sidebarActive ? "backdrop--sidebar" : ""}`} onClick={onBackDropClick}></div>
         </div>
     );
-}
+
+    function le({}) {
+      return (<div className="navBar__left flex">
+                            <Link href="#">
+                                <a href="#" className="main-logo">
+                                    <Image src="/assets/icons/nike.svg" height={60} width={60} />
+                                </a>
+                            </Link>
+                        </div>);
+    }
+  }

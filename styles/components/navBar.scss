@@ -188,10 +188,6 @@
                                     transform: scale(0);
                                     @include scale;
                                     animation: scale 0.15s 0.5s ease-in-out forwards;
-
-                                    // @include lg-down{
-
-                                    // }
                                 }
                             }
                         }
@@ -324,7 +320,6 @@
             border-radius: 20px;
             background: #f5f5f5;
             border: none;
-            // transition: width 0.25s ease-in-out;
 
             &:hover {
                 background-color: #e5e5e5;
@@ -481,7 +476,6 @@
     visibility: hidden;
     background-color: $bg-white;
     z-index: 99;
-    // transition: max-height 0.15s ease-out;
 
     .menu-dropdown {
         width: 100%;
