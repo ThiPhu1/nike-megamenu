@@ -91,7 +91,7 @@ export default function Sidebar(props) {
                                                         }
                                                     );
                                                 }
-                                                : () => false
+                                                : disableSideBar
                                         }
                                     >
                                         {
@@ -126,7 +126,10 @@ export default function Sidebar(props) {
                     <div className="sidebar__bottom">
                         <div className="brand-item-list">
                             <Link href="#">
-                                <a className="brand-item">
+                                <a 
+                                    className="brand-item"
+                                    onClick={disableSideBar}
+                                >
                                     <Image
                                         className="brand-item__logo"
                                         src="/assets/icons/jordan.svg"
@@ -158,6 +161,7 @@ export default function Sidebar(props) {
                                     <a
                                         href="#"
                                         className="btn btn--primary"
+                                        onClick={disableSideBar}
                                     >
                                         join us
                                     </a>
@@ -169,6 +173,7 @@ export default function Sidebar(props) {
                                     <a
                                         href="#"
                                         className="btn btn--outlined"
+                                        onClick={disableSideBar}
                                     >
                                         sign in
                                     </a>
@@ -184,7 +189,9 @@ export default function Sidebar(props) {
                                                 <Link href="#">
                                                     <a
                                                         className="flex item"
-                                                        href="#">
+                                                        href="#"
+                                                        onClick={disableSideBar}
+                                                        >
                                                         <Image
                                                             className="item__icon"
                                                             src={item.icon}
@@ -210,6 +217,7 @@ export default function Sidebar(props) {
                 isActive={subMenuActive}
                 setSubMenuActive={setSubMenuActive}
                 setMainMenuActive={setMainMenuActive}
+                disableSideBar={disableSideBar}
             />
             {/* </div> */}
         </div>

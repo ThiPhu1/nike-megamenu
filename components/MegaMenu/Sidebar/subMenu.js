@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import SubMenuChild from './subMenuChild';
 
 export default function SubMenu(props) {
-    const { menuData, isActive, setSubMenuActive:setSubMenuActive, setMainMenuActive } = props;
+    const { menuData, isActive, setSubMenuActive:setSubMenuActive, setMainMenuActive, disableSideBar } = props;
 
     const flattenMenuData = menuData?.data?.map((item) => {
         if (item.columnType) {
@@ -94,6 +94,7 @@ export default function SubMenu(props) {
                 isActive={childMenuActive}
                 setActiveStatus={setChildActiveStatus}
                 setSubMenuActive={setSubMenuActive}
+                disableSideBar={disableSideBar}
             />
         </div>
     );

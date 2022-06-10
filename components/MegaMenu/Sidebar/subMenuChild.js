@@ -2,10 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SubMenuChild(props) {
-    const { menuData, isActive, setActiveStatus, setSubMenuActive } = props;
+    const { menuData, isActive, setActiveStatus, setSubMenuActive, disableSideBar } = props;
 
     const onBackBtnClick = () => {
         setSubMenuActive("t-right");
+    }
+
+    const onItemClick = () => {
+        disableSideBar()
     }
 
     return (
@@ -34,6 +38,7 @@ export default function SubMenuChild(props) {
                                 <li
                                     className="menu-list__item"
                                     key={index}
+                                    onClick={onItemClick}
                                 >
                                     <Link href={menuItem.path || "#"}>
                                         <a href="#">
