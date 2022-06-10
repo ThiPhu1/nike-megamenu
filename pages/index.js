@@ -5,7 +5,6 @@ export default function Home() {
     <>
       <MegaMenu />
       <div className="body">
-        <h1>body</h1>
       </div>
     </>
   );
