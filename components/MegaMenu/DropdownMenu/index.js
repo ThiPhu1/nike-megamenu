@@ -1,23 +1,36 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function DropdownMenu(props) {
-    const { children, menuData, type, setBackdropActive } = props;
+    const { children, menuData, type, setBackdropActive, navItemTitle } = props;
+
+    const [navItemActive, setNavItemActive] = useState(false);
+
     const hasContent = menuData && menuData.length > 0;
 
-    const onMouseEnterHandler = () => {
-        setBackdropActive(true);
+    const openDropdown = () => {
+        if (type == "navBar" && hasContent) { setBackdropActive(true); }
+        setNavItemActive(true);
     }
 
-    const onMouseLeaveHandler = () => {
-        setBackdropActive(false);
+    const hideDropdown = () => {
+        if (type == "navBar" && hasContent) { setBackdropActive(false); }
+        setNavItemActive(false);
     }
 
     return (
         <div
-            className={`menu-dropdown-container menu-dropdown-container__${type}`}
-            onMouseEnter={(type == "navBar" && hasContent) ? onMouseEnterHandler : () => false}
-            onMouseLeave={(type == "navBar" && hasContent) ? onMouseLeaveHandler : () => false}>
-            {children}
+            className={`menu-dropdown-container menu-dropdown-container__${type} ${navItemActive ? "is-active" : ""}`}
+            onMouseEnter={openDropdown}
+            onMouseLeave={hideDropdown}>
+            <Link href="#">
+                <a
+                    href="#"
+                    className={`${type}-nav-item`}
+                >
+                    {navItemTitle}
+                </a>
+            </Link>
             {
                 hasContent
                     ? <div className="menu-dropdown-wrapper">
@@ -31,7 +44,30 @@ export default function DropdownMenu(props) {
                                                 menuColumn.items.map((item, index) => {
                                                     return (
                                                         <nav className="subMenu" key={index}>
-                                                            <h4 className="subMenu__heading">{item.title}</h4>
+                                                            {
+                                                                menuColumn.path
+                                                                    ? <Link href={menuColumn.path}>
+                                                                        <a
+                                                                            href="#"
+                                                                            onClick={hideDropdown}
+                                                                        >
+                                                                            <h4
+                                                                                className="subMenu__heading"
+                                                                            >
+                                                                                {item.title}
+                                                                            </h4>
+                                                                        </a>
+                                                                    </Link>
+                                                                    : <a
+                                                                        onClick={hideDropdown}
+                                                                    >
+                                                                        <h4
+                                                                            className="subMenu__heading"
+                                                                        >
+                                                                            {item.title}
+                                                                        </h4>
+                                                                    </a>
+                                                            }
                                                             <ul className="subMenu__list">
                                                                 {item.items.map((menuItem, index) => {
                                                                     return (
@@ -42,12 +78,14 @@ export default function DropdownMenu(props) {
                                                                                         <a
                                                                                             className="item__title"
                                                                                             href="#"
+                                                                                            onClick={hideDropdown}
                                                                                         >
                                                                                             {menuItem.title}
                                                                                         </a>
                                                                                     </Link>
                                                                                     : <a
                                                                                         className="item__title"
+                                                                                        onClick={hideDropdown}
                                                                                     >
                                                                                         {menuItem.title}
                                                                                     </a>
@@ -66,7 +104,30 @@ export default function DropdownMenu(props) {
                                 } else
                                     return (
                                         <nav className="subMenu" key={index}>
-                                            <h4 className="subMenu__heading">{menuColumn.title}</h4>
+                                            {
+                                                menuColumn.path
+                                                    ? <Link href={menuColumn.path}>
+                                                        <a
+                                                            href="#"
+                                                            onClick={hideDropdown}
+                                                        >
+                                                            <h4
+                                                                className="subMenu__heading"
+                                                            >
+                                                                {menuColumn.title}
+                                                            </h4>
+                                                        </a>
+                                                    </Link>
+                                                    : <a
+                                                        onClick={hideDropdown}
+                                                    >
+                                                        <h4
+                                                            className="subMenu__heading"
+                                                        >
+                                                            {menuColumn.title}
+                                                        </h4>
+                                                    </a>
+                                            }
                                             <ul className="subMenu__list">
                                                 {menuColumn.items.map((menuItem, index) => {
                                                     return (
@@ -77,12 +138,14 @@ export default function DropdownMenu(props) {
                                                                         <a
                                                                             className="item__title"
                                                                             href="#"
+                                                                            onClick={hideDropdown}
                                                                         >
                                                                             {menuItem.title}
                                                                         </a>
                                                                     </Link>
                                                                     : <a
                                                                         className="item__title"
+                                                                        onClick={hideDropdown}
                                                                     >
                                                                         {menuItem.title}
                                                                     </a>

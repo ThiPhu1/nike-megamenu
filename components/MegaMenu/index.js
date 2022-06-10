@@ -20,7 +20,7 @@ export default function MegaMenu(props) {
     const [sidebarActive, setSidebarActive] = useState(false);
     const [navBarPos, setNavbarPos] = useState('relative');
 
-    const { isCustomDevice:isTablet } = useDeviceDetect(1024);
+    const { isCustomDevice: isTablet } = useDeviceDetect(1024);
 
     const enableSearchExtended = () => {
         if (!searchExpanded) {
@@ -90,7 +90,7 @@ export default function MegaMenu(props) {
             setSidebarActive(false);
             setBackdropActive(false);
         }
-    }, [sidebarActive,isTablet])
+    }, [sidebarActive, isTablet])
 
     return (
         <div className="container container--fluid">
@@ -178,17 +178,12 @@ export default function MegaMenu(props) {
                                                     key={index}
                                                     menuData={item.items}
                                                     type="navBar"
+                                                    navItemTitle={item.title}
                                                     setBackdropActive={setBackdropActive}
                                                 >
-                                                    <Link href="#">
-                                                        <a
-                                                            href="#"
-                                                            className="navBar-nav-item"
-                                                        >
-                                                            {item.title}
-                                                        </a>
-                                                    </Link>
+            
                                                 </DropdownMenu>
+
                                             );
                                         })
                                     }
@@ -204,7 +199,7 @@ export default function MegaMenu(props) {
                 setSidebarActive={setSidebarActive}
                 menuData={data}
             />
-            {backdropActive && <div className={`backdrop ${sidebarActive ? "backdrop--sidebar" : ""}`} onClick={onBackDropClick}></div>}
+            <div className={`backdrop ${backdropActive ? "is-active" : ""} ${sidebarActive ? "backdrop--sidebar" : ""}`} onClick={onBackDropClick}></div>
         </div>
     );
 }

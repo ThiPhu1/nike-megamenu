@@ -52,6 +52,7 @@ export default function TopBar(props) {
                     <DropdownMenu
                         menuData={helpMenuData}
                         type="topBar"
+                        navItemTitle="help"
                     >
                         <Link href="#">
                             <a
