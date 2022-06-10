@@ -18,7 +18,7 @@ export default function MegaMenu(props) {
     const [searchExpanded, setSearchExpanded] = useState(false);
     const [backdropActive, setBackdropActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
-    const [navBarPos, setNavbarPos] = useState('relative');
+    const [navBarPos, setNavbarPos] = useState('');
 
     const { isCustomDevice: isTablet } = useDeviceDetect(1024);
 
@@ -48,10 +48,10 @@ export default function MegaMenu(props) {
                 ticking = false;
                 return;
             }
-            if (scrollY > 36) {
+            if (scrollY > 20) {
                 setNavbarPos(scrollY < lastScrollY ? "is-fixed" : "is-fixed is-hidden");
             } else {
-                setNavbarPos('relative')
+                setNavbarPos('')
             }
             lastScrollY = scrollY > 0 ? scrollY : 0;
             ticking = false;
@@ -97,7 +97,7 @@ export default function MegaMenu(props) {
             <TopBar
                 searchExpanded={searchExpanded}
             />
-            <div className="container container--fluid relative z-9999">
+            <div className="navBar-container container container--fluid relative z-9999">
                 <div className={`navBar-wrapper ${navBarPos}`}>
                     <div
                         className={`navBar ${searchExpanded ? "navBar--search" : ""}`}
