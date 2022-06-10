@@ -113,14 +113,19 @@
                         margin: 0 0 0 38px;
                         flex: 1 0 $searchBarExpanded;
 
+                        @include lg-down {
+                            flex: 1 1 auto;
+                            margin: 0 16px 0 38px;
+                        }
+
                         &--expanded {
                             .searchBar {
                                 float: right;
                                 width: $searchBarExpanded;
+                                transition: width 0.25s ease-in-out;
 
                                 @include lg-down {
-                                    width: $searchBarExpanded;
-                                    height: auto;
+                                    width: 100%;
                                 }
 
                                 .searchForm {
@@ -160,6 +165,11 @@
                         justify-content: flex-end;
                         gap: 0;
 
+                        @include lg-down {
+                            justify-content: unset;
+                            width: unset;
+                        }
+
                         &__button-group {
                             justify-content: flex-end;
 
@@ -168,6 +178,10 @@
                                     transform: scale(0);
                                     @include scale;
                                     animation: scale 0.15s 0.5s ease-in-out forwards;
+
+                                    // @include lg-down{
+
+                                    // }
                                 }
                             }
                         }
@@ -195,7 +209,6 @@
             .utility {
                 gap: 12px;
                 z-index: 1;
-
 
                 &__button-group {
                     display: flex;
@@ -273,13 +286,13 @@
         position: relative;
         display: flex;
         width: 180px;
-        transition: width 0.25s ease-in-out;
+        
 
         @include lg-down {
             width: 36px;
             height: 36px;
             padding: 0;
-            // opacity: 0;
+            // transition: none;
         }
 
         &__icon {
@@ -520,7 +533,7 @@
 }
 
 .sidebar-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: flex;
