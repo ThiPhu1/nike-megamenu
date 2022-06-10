@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
 
 export default function SubMenuChild(props) {
     const { menuData, isActive, setActiveStatus, setSubMenuActive } = props;
@@ -21,11 +21,11 @@ export default function SubMenuChild(props) {
                             height={12}
                             width={12}
                         />
-                        <span className="back-btn__text">{menuData?.prevHeading}</span>
+                        <span className="back-btn__text">{menuData?.prevTitle}</span>
                     </a>
                 </div>
                 <h3 className="subMenu__heading">
-                    {menuData?.heading}
+                    {menuData?.title}
                 </h3>
                 <ul className="subMenu__menu-list">
                     {
@@ -35,11 +35,11 @@ export default function SubMenuChild(props) {
                                     className="menu-list__item"
                                     key={index}
                                 >
-                                    <a
-                                        className="item__title"
-                                    >
-                                        {menuItem.heading}
-                                    </a>
+                                    <Link href={menuItem.path || "#"}>
+                                        <a href="#">
+                                            {menuItem.title}
+                                        </a>
+                                    </Link>
                                 </li>
                             );
                         })

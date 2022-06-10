@@ -40,11 +40,11 @@ export default function SubMenu(props) {
                                 height={12}
                                 width={12}
                             />
-                            <span className="back-btn__text">{menuData?.prevHeading}</span>
+                            <span className="back-btn__text">{menuData?.prevTitle}</span>
                         </a>
                     </div>
                     <h3 className="subMenu__heading">
-                        {menuData?.heading}
+                        {menuData?.title}
                     </h3>
                     <ul className="subMenu__menu-list">
                         {
@@ -59,8 +59,8 @@ export default function SubMenu(props) {
 
                                                     onMenuItemClick(
                                                         {
-                                                            heading: menuItem.heading,
-                                                            prevHeading: menuData?.heading,
+                                                            title: menuItem.title,
+                                                            prevTitle: menuData?.title,
                                                             data: menuItem?.items,
                                                         }
                                                     );
@@ -71,7 +71,7 @@ export default function SubMenu(props) {
                                         <a
                                             className="item__title"
                                         >
-                                            {menuItem.heading}
+                                            {menuItem.title}
                                         </a>
                                         {menuItem?.items && menuItem?.items.length > 0
                                             ? <Image

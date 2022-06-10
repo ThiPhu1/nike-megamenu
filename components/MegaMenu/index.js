@@ -7,6 +7,8 @@ import SearchBar from "./SearchBar";
 import DropdownMenu from "./DropdownMenu";
 import Sidebar from "./Sidebar";
 
+import useDeviceDetect from "../../utils/useDeviceDetect";
+
 import jsonFile from "./mainMenuData.json";
 
 export default function MegaMenu(props) {
@@ -17,6 +19,8 @@ export default function MegaMenu(props) {
     const [backdropActive, setBackdropActive] = useState(false);
     const [sidebarActive, setSidebarActive] = useState(false);
     const [navBarPos, setNavbarPos] = useState('relative');
+
+    const { isCustomDevice:isTablet } = useDeviceDetect(1024);
 
     const enableSearchExtended = () => {
         if (!searchExpanded) {
@@ -71,15 +75,22 @@ export default function MegaMenu(props) {
         setBackdropActive(false);
     }
 
-    const enableMenuBar = () => {
+    const enableSideBar = () => {
         setSidebarActive(true);
         setBackdropActive(true);
     }
 
-    const disableMenuBar = () => {
+    const disableSideBar = () => {
         setSidebarActive(false);
         setBackdropActive(false);
     }
+
+    useEffect(() => {
+        if (!isTablet) {
+            setSidebarActive(false);
+            setBackdropActive(false);
+        }
+    }, [sidebarActive,isTablet])
 
     return (
         <div className="container container--fluid">
@@ -145,7 +156,7 @@ export default function MegaMenu(props) {
                                             </Link>
                                             <a
                                                 className="utility-btn flex utility-btn--bars"
-                                                onClick={enableMenuBar}
+                                                onClick={enableSideBar}
                                             >
                                                 <Image
                                                     src="/assets/icons/bars.svg"
@@ -174,7 +185,7 @@ export default function MegaMenu(props) {
                                                             href="#"
                                                             className="navBar-nav-item"
                                                         >
-                                                            {item.heading}
+                                                            {item.title}
                                                         </a>
                                                     </Link>
                                                 </DropdownMenu>
@@ -188,7 +199,7 @@ export default function MegaMenu(props) {
                 </div>
             </div>
             <Sidebar
-                disableMenuBar={disableMenuBar}
+                disableSideBar={disableSideBar}
                 sidebarActive={sidebarActive}
                 setSidebarActive={setSidebarActive}
                 menuData={data}

@@ -7,8 +7,12 @@ import { enableBodyScroll, disableBodyScroll } from "body-scroll-lock";
 import SubMenu from "./subMenu";
 
 export default function Sidebar(props) {
-    const { sidebarActive, disableMenuBar, menuData } = props;
+    const { sidebarActive, disableSideBar, menuData } = props;
     const sidebarRef = useRef();
+
+    const [subMenuData, setSubMenuData] = useState();
+    const [mainMenuActive, setMainMenuActive] = useState();
+    const [subMenuActive, setSubMenuActive] = useState();
 
     const utilities = [
         {
@@ -36,10 +40,14 @@ export default function Sidebar(props) {
         enableBodyScroll(sidebarRef.current);
 
     }, [sidebarActive])
-    
-    const [subMenuData, setSubMenuData] = useState();
-    const [mainMenuActive, setMainMenuActive] = useState();
-    const [subMenuActive, setSubMenuActive] = useState();
+
+    useEffect(() => {
+        if (!sidebarActive) {
+            setMainMenuActive("");
+            setSubMenuActive("");
+        }
+    }, [sidebarActive])
+
 
     const onMenuItemClick = (data) => {
         setSubMenuData(data);
@@ -47,158 +55,162 @@ export default function Sidebar(props) {
         setSubMenuActive("t-left");
     }
 
-    useEffect(()=>{
-        if(!sidebarActive){
-            setMainMenuActive("");
-            setSubMenuActive("");
-        }
-    },[sidebarActive])
 
     return (
         <div className={`sidebar-container ${sidebarActive ? "is-active" : ""}`} ref={sidebarRef}>
             {/* <div className="container-viewport"> */}
-                <div className={`sidebar-wrapper ${mainMenuActive}`}>
-                    <div className="sidebar">
-                        <div className="close-btn-wrapper">
-                            <a
-                                className="close-btn"
-                                onClick={disableMenuBar}
-                            >
-                                <Image
-                                    src="/assets/icons/times.svg"
-                                    height={18}
-                                    width={18}
-                                />
-                            </a>
+            <div className={`sidebar-wrapper ${mainMenuActive}`}>
+                <div className="sidebar">
+                    <div className="close-btn-wrapper">
+                        <a
+                            className="close-btn"
+                            onClick={disableSideBar}
+                        >
+                            <Image
+                                src="/assets/icons/times.svg"
+                                height={18}
+                                width={18}
+                            />
+                        </a>
+                    </div>
+                    <ul className="sidebar__menu-list">
+                        {
+                            menuData.map((menuItem, index) => {
+                                return (
+                                    <li
+                                        className="menu-list__item"
+                                        key={index}
+                                        onClick={
+                                            menuItem.items && menuItem.items.length > 0
+                                                ? () => {
+                                                    onMenuItemClick(
+                                                        {
+                                                            title: menuItem.title,
+                                                            prevTitle: "All",
+                                                            data: menuItem.items,
+                                                        }
+                                                    );
+                                                }
+                                                : () => false
+                                        }
+                                    >
+                                        {
+                                            menuItem.path
+                                                ? <Link href={menuItem.path}>
+                                                    <a
+                                                        className="item__title"
+                                                        href="#"
+                                                    >
+                                                        {menuItem.title}
+                                                    </a>
+                                                </Link>
+                                                : <a
+                                                    className="item__title"
+                                                >
+                                                    {menuItem.title}
+                                                </a>
+                                        }
+                                        {menuItem.items && menuItem.items.length > 0
+                                            ? <Image
+                                                src="/assets/icons/chevron-right.svg"
+                                                width={12}
+                                                height={12}
+                                            />
+                                            : <></>
+                                        }
+                                    </li>
+                                );
+                            })
+                        }
+                    </ul>
+                    <div className="sidebar__bottom">
+                        <div className="brand-item-list">
+                            <Link href="#">
+                                <a className="brand-item">
+                                    <Image
+                                        className="brand-item__logo"
+                                        src="/assets/icons/jordan.svg"
+                                        height={30}
+                                        width={30}
+                                    />
+                                    <span
+                                        className="brand-item__title"
+                                    >
+                                        Jordan
+                                    </span>
+                                </a>
+                            </Link>
                         </div>
-                        <ul className="sidebar__menu-list">
-                            {
-                                menuData.map((menuItem, index) => {
-                                    return (
-                                        <li
-                                            className="menu-list__item"
-                                            key={index}
-                                            onClick={
-                                                menuItem.items && menuItem.items.length > 0
-                                                    ? () => {
-
-                                                        onMenuItemClick(
-                                                            {
-                                                                heading: menuItem.heading,
-                                                                prevHeading: "All",
-                                                                data: menuItem.items,
-                                                            }
-                                                        );
-                                                    }
-                                                    : () => false
-                                            }
-                                        >
-                                            <a
-                                                className="item__title"
-                                            >
-                                                {menuItem.heading}
-                                            </a>
-                                            {menuItem.items && menuItem.items.length > 0
-                                                ? <Image
-                                                    src="/assets/icons/chevron-right.svg"
-                                                    width={12}
-                                                    height={12}
-                                                />
-                                                : <></>
-                                            }
-                                        </li>
-                                    );
-                                })
-                            }
-                        </ul>
-                        <div className="sidebar__bottom">
-                            <div className="brand-item-list">
+                        <div className="register">
+                            <h4 className="register__heading">
+                                Become a Nike Member for the best products, inspiration and stories in sport.{" "}
                                 <Link href="#">
-                                    <a className="brand-item">
-                                        <Image
-                                            className="brand-item__logo"
-                                            src="/assets/icons/jordan.svg"
-                                            height={30}
-                                            width={30}
-                                        />
-                                        <span
-                                            className="brand-item__title"
-                                        >
-                                            Jordan
-                                        </span>
+                                    <a href="#">
+                                        Learn more
+                                    </a>
+                                </Link>
+                            </h4>
+                            <div className="register__button-group">
+                                <Link
+                                    href="#"
+
+                                >
+                                    <a
+                                        href="#"
+                                        className="btn btn--primary"
+                                    >
+                                        join us
+                                    </a>
+                                </Link>
+                                <Link
+                                    href="#"
+
+                                >
+                                    <a
+                                        href="#"
+                                        className="btn btn--outlined"
+                                    >
+                                        sign in
                                     </a>
                                 </Link>
                             </div>
-                            <div className="register">
-                                <h4 className="register__heading">
-                                    Become a Nike Member for the best products, inspiration and stories in sport.{" "}
-                                    <Link href="#">
-                                        <a href="#">
-                                            Learn more
-                                        </a>
-                                    </Link>
-                                </h4>
-                                <div className="register__button-group">
-                                    <Link
-                                        href="#"
-
-                                    >
-                                        <a
-                                            href="#"
-                                            className="btn btn--primary"
-                                        >
-                                            join us
-                                        </a>
-                                    </Link>
-                                    <Link
-                                        href="#"
-
-                                    >
-                                        <a
-                                            href="#"
-                                            className="btn btn--outlined"
-                                        >
-                                            sign in
-                                        </a>
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="utility">
-                                <ul className="utility-list">
-                                    {
-                                        utilities.map((item, index) => {
-                                            return (
-                                                <li className="utility-list__item" key={index}>
-                                                    <Link href="#">
-                                                        <a
-                                                            className="flex item"
-                                                            href="#">
-                                                            <Image
-                                                                className="item__icon"
-                                                                src={item.icon}
-                                                                height={24}
-                                                                width={24}
-                                                            />
-                                                            <span
-                                                                className="item__title"
-                                                            >{item.title}</span>
-                                                        </a>
-                                                    </Link>
-                                                </li>
-                                            );
-                                        })
-                                    }
-                                </ul>
-                            </div>
+                        </div>
+                        <div className="utility">
+                            <ul className="utility-list">
+                                {
+                                    utilities.map((item, index) => {
+                                        return (
+                                            <li className="utility-list__item" key={index}>
+                                                <Link href="#">
+                                                    <a
+                                                        className="flex item"
+                                                        href="#">
+                                                        <Image
+                                                            className="item__icon"
+                                                            src={item.icon}
+                                                            height={24}
+                                                            width={24}
+                                                        />
+                                                        <span
+                                                            className="item__title"
+                                                        >{item.title}</span>
+                                                    </a>
+                                                </Link>
+                                            </li>
+                                        );
+                                    })
+                                }
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <SubMenu
-                    menuData={subMenuData}
-                    isActive={subMenuActive}
-                    setSubMenuActive={setSubMenuActive}
-                    setMainMenuActive={setMainMenuActive}
-                />
+            </div>
+            <SubMenu
+                menuData={subMenuData}
+                isActive={subMenuActive}
+                setSubMenuActive={setSubMenuActive}
+                setMainMenuActive={setMainMenuActive}
+            />
             {/* </div> */}
         </div>
     )

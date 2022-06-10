@@ -1,17 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { useRef, useState, useEffect } from 'react';
 
 export default function SearchBar(props) {
     const { onCLickHandler, isExtended } = props;
     const searchFieldRef = useRef();
     const [inputHasText, setInputHasText] = useState(false);
-    const { isCustomDevice:isTablet } = useDeviceDetect(1024);
-
-    // useEffect(()=>{
-    //     console.log(isTablet);
-    // },[isTablet])
 
     const searchTerms = [
         {

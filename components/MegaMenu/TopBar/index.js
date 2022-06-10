@@ -8,31 +8,31 @@ export default function TopBar(props) {
 
     const helpMenuData = [
         {
-            heading: "help",
+            title: "help",
             items: [
                 {
-                    heading: "Order Status",
+                    title: "Order Status",
                 },
                 {
-                    heading: "Dispatch and Delivery",
+                    title: "Dispatch and Delivery",
                 },
                 {
-                    heading: "Returns",
+                    title: "Returns",
                 },
                 {
-                    heading: "Contact Us",
+                    title: "Contact Us",
                 },
                 {
-                    heading: "Privacy Policy",
+                    title: "Privacy Policy",
                 },
                 {
-                    heading: "Terms of Sale",
+                    title: "Terms of Sale",
                 },
                 {
-                    heading: "Terms of Use",
+                    title: "Terms of Use",
                 },
                 {
-                    heading: "Send Us Feedback",
+                    title: "Send Us Feedback",
                 },
             ]
         }
