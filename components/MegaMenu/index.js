@@ -48,7 +48,7 @@ export default function MegaMenu(props) {
                 ticking = false;
                 return;
             }
-            if (scrollY > 50) {
+            if (scrollY > 20) {
                 setNavbarPos(scrollY < lastScrollY ? "is-fixed" : "is-fixed is-hidden");
             } else {
                 setNavbarPos('')
