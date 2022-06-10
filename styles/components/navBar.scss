@@ -122,10 +122,10 @@
                             .searchBar {
                                 float: right;
                                 width: $searchBarExpanded;
-                                transition: width 0.25s ease-in-out;
 
                                 @include lg-down {
                                     width: 100%;
+                                    transition: width 0.25s ease-in-out
                                 }
 
                                 .searchForm {
@@ -286,13 +286,15 @@
         position: relative;
         display: flex;
         width: 180px;
-        
+        transition: width 0.25s ease-in-out;
+
 
         @include lg-down {
             width: 36px;
             height: 36px;
             padding: 0;
-            // transition: none;
+            transition: none
+
         }
 
         &__icon {
